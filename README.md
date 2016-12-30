@@ -4,7 +4,7 @@ A simple code to help create a csv file in an android application
 
 Examples
 
-private void createCsvFileExample1() {
+    private void createCsvFileExample1() {
         String foldeName = "MyAppFolder";
         String fileName = "myFile";
 
