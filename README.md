@@ -1,11 +1,11 @@
 # Android-CSV-Writer
 A simple code to help create a csv file in an android application
 
-DON'T FORGET TO ADD THIS PERMISSION TO ANDROID MANIFEST
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
 Examples
 
+    DON'T FORGET TO ADD THIS PERMISSION TO ANDROID MANIFEST
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
     private void createCsvFileExample1() {
         String foldeName = "MyAppFolder";
         String fileName = "myFile";
