@@ -53,6 +53,7 @@ public class WriteCSVHelper {
 
         } catch (IOException e) {
             e.printStackTrace();
+            throw e;
         }
     }
 
