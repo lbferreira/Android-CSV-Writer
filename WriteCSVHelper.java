@@ -80,7 +80,9 @@ public class WriteCSVHelper {
         }
 
         try {
-            outputStreamWriter.append(textWithSeparator.toString() + "\n");
+            outputStreamWriter.append(textWithSeparator.toString());
+            outputStreamWriter.append("\n");
+            outputStreamWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -111,7 +113,9 @@ public class WriteCSVHelper {
         }
 
         try {
-            outputStreamWriter.append(textWithSeparator.toString() + "\n");
+            outputStreamWriter.append(textWithSeparator.toString());
+            outputStreamWriter.append("\n");
+            outputStreamWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -142,7 +146,9 @@ public class WriteCSVHelper {
         }
 
         try {
-            outputStreamWriter.append(textWithSeparator.toString() + "\n");
+            outputStreamWriter.append(textWithSeparator.toString());
+            outputStreamWriter.append("\n");
+            outputStreamWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -173,7 +179,9 @@ public class WriteCSVHelper {
         }
 
         try {
-            outputStreamWriter.append(textWithSeparator.toString() + "\n");
+            outputStreamWriter.append(textWithSeparator.toString());
+            outputStreamWriter.append("\n");
+            outputStreamWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
             return false;
