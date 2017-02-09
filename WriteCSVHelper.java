@@ -56,6 +56,22 @@ public class WriteCSVHelper {
             throw e;
         }
     }
+    
+    /**
+     * Create a csv file if don't exists
+     * @throws IOException
+     */
+    private boolean createCsvFileIfDontExists(){
+        if(outputStreamWriter == null){
+            try {
+                createCsvFile();
+                return true;
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }
+    }
 
 
     /**
@@ -64,17 +80,11 @@ public class WriteCSVHelper {
      * @return true if the line was successfully written, false if not
      */
     public boolean writeLine(String[] csvText){
-        if(outputStreamWriter == null){
-            try {
-                createCsvFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            }
+        if(!createCsvFileIfDontExists()){
+            return false;
         }
 
         StringBuilder textWithSeparator = new StringBuilder();
-
         for(String text: csvText){
             textWithSeparator.append(text + separator);
         }
@@ -97,17 +107,11 @@ public class WriteCSVHelper {
      * @return true if the line was successfully written, false if not
      */
     public boolean writeLine(ArrayList<String> csvText){
-        if(outputStreamWriter == null){
-            try {
-                createCsvFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            }
+        if(!createCsvFileIfDontExists()){
+            return false;
         }
 
         StringBuilder textWithSeparator = new StringBuilder();
-
         for(String text: csvText){
             textWithSeparator.append(text + separator);
         }
@@ -130,17 +134,11 @@ public class WriteCSVHelper {
      * @return true if the line was successfully written, false if not
      */
     public boolean writeLine(double[] csvText){
-        if(outputStreamWriter == null){
-            try {
-                createCsvFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            }
+        if(!createCsvFileIfDontExists()){
+            return false;
         }
 
         StringBuilder textWithSeparator = new StringBuilder();
-
         for(double text: csvText){
             textWithSeparator.append(text + separator);
         }
@@ -163,17 +161,11 @@ public class WriteCSVHelper {
      * @return true if the line was successfully written, false if not
      */
     public boolean writeLine(int[] csvText){
-        if(outputStreamWriter == null){
-            try {
-                createCsvFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            }
+        if(!createCsvFileIfDontExists()){
+            return false;
         }
 
         StringBuilder textWithSeparator = new StringBuilder();
-
         for(double text: csvText){
             textWithSeparator.append(text + separator);
         }
@@ -210,8 +202,6 @@ public class WriteCSVHelper {
             return false;
         }
     }
-
-
 
 
 
